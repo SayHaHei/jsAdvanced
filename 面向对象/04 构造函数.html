@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>构造函数</title>
+</head>
+<body>
+    <script>
+        //构造函数---构造对象的函数
+        /*
+        与工厂函数的区别
+        构造函数更简单
+        */
+        function Hero(name, blood, weapon)
+        {
+            this.name = name;
+            this.blood = blood;
+            this.weapon = weapon;
+            this.attack = function(){
+                console.log(this.weapon + "攻击敌人");
+            }
+        }
+        //1.会在内存中创建一个空对象
+        //2.设置构造函数的this，让this指向刚刚创建好的对象
+        //3.执行构造函数中的代码
+        //4.返回对象
+        var hero = new Hero("lb", 100, "剑");
+        hero.attack()
+        //无法使用typeof获取对象的具体类型
+        console.log(typeof hero)
+
+        var arr = new Array()
+        console.log(typeof arr)
+        //获取对象的具体类型
+        //constructor 获取对象的具体类型  但是可写的  不推荐使用
+        
+        console.log(hero.constructor === Hero)
+        var arr = [];
+        console.log(arr.constructor === Array)
+        //instanceof 判断某个对象是否是某个构造函数的实例/对象---推荐使用
+        console.log(hero instanceof Hero);
+        console.log(arr instanceof Array);
+    </script>
+</body>
+</html>
