@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //工具中使用静态成员
+        var MyMath = {
+            PI:3.1415926,
+            max:function(){
+
+            },
+            min:function(){
+
+            }
+        }
+        //静态成员 ---直接使用对象来调用的
+        // MyMath.PI;
+        //实例成员  当有很多个对象的时候，使用构造函数
+        //什么是实例成员？
+        //实例是对象的另一种说法 构造函数中的成员就是实例成员
+        function Person(name,age) {
+            this.name = name;
+            this.age = age;
+            this.sayHi = function () {  }
+        }
+        //通过构造函数创建对象
+        var p = new Person("zs", 33);
+        p.sayHi()
+    </script>
+</body>
+</html>
