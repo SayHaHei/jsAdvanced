@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //每一个构造函数都有一个原型/原型对象
+        function Student(name, age, sex) {  
+            this.name = name;
+            this.age = age;
+            this.sex = sex;    
+            // this.sayHi = function()
+            // {
+            //     console.log("构造函数中的");
+            // }   
+        }
+        console.log(Student.prototype) 
+        Student.prototype.sayHi = function(){
+            console.log("大家好，我是 " + this.name);
+        }
+        //通过Student构造函数创建的对象，可以访问Student.prototype中的成员
+        var s1 = new Student("李磊", 15, "男");
+        var s2 = new Student("hmm", 13, "女");
+        s1.sayHi();
+        // s2.sayHi();
+        // console.log(s1.sayHi === s2.sayHi);
+        console.dir(s1);
+        //当调用对象的属性或者方法的时候，先去找对象本身的属性和方法
+        //如果没有，此时取原型找属性或方法
+        //如果都没有，报错
+        //s1.__proto__ 对象的__proto__等于构造函数的Student.prototype
+        //__proto__属性是非标准的属性
+
+        console.log(s1.__proto__ === Student.prototype)
+        console.dir(Student.prototype)
+        console.dir(s1.__proto__)
+        //在原型对象中有一个属性 constructor 构造函数
+        //constructor 作用是记录了创建该对象的构造函数，记录了创建该对象的构造函数
+        console.log(s1.constructor);
+
+        var arr = [];
+        console.log(arr.constructor === Array)
+    </script>
+</body>
+</html>
