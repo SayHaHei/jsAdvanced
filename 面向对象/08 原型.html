@@ -22,6 +22,7 @@
         Student.prototype.sayHi = function(){
             console.log("大家好，我是 " + this.name);
         }
+        Student.prototype.test = "abc";
         //通过Student构造函数创建的对象，可以访问Student.prototype中的成员
         var s1 = new Student("李磊", 15, "男");
         var s2 = new Student("hmm", 13, "女");
@@ -44,6 +45,20 @@
 
         var arr = [];
         console.log(arr.constructor === Array)
+        //s1对象的原型对象的原型对象 就是  object构造函数的原型对象
+        //所有的对象都有toString()
+        console.log(s1.toString())
+        console.dir(s1)
+        console.dir(s1.__proto__)
+        console.dir(s1.__proto__.__proto__)
+        //读取属性现在对象本身查找，如果没有，会去原型链查找
+
+        //设置属性 ---不会搜索原型链
+        s1.name = "hgjk";
+        s1.test = "ui";
+        console.log(s1.name)
+        console.log(s2.name)
+
     </script>
 </body>
 </html>
