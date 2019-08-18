@@ -4,4 +4,4 @@ var Tools = {
         max = Math.floor(max);
         return Math.random()*(max - min + 1) + min;  /*random 0~1*/
     }
-}
+};
