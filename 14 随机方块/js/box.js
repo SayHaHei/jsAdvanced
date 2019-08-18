@@ -6,7 +6,7 @@ function Box(parent, options) { //options
     this.height = options.height || 20;
     this.x = options.x || 0;
     this.y = options.y || 0;
-    this.parent = parent
+    this.parent = parent;
     //创建对应的div
     this.div = document.createElement("div");
     parent.appendChild(this.div);
