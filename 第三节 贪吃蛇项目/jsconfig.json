@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "allowSyntheticDefaultImports": true
+    },
+    "include": [
+        "/**/*",
+        "/第三节 贪吃蛇项目/*"
+    ]
+}
