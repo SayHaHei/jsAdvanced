@@ -1,4 +1,5 @@
 //生成10个方块  随机生成颜色
+<script src="../js/box.js"></script>
 var container = document.getElementById("container");
 //数组 存储创建的方块
 var array = new Array();
