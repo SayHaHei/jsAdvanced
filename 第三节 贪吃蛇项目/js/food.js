@@ -16,8 +16,8 @@
         //删除之前创建的食物
         remove();
         //随机设置x和y
-        this.x = Tools.getRandom(0, map.offsetWidth / this.width - 1) * this.width;
-        this.y = Tools.getRandom(0, map.offsetHeight / this.height - 1) * this.height;
+        this.x = Math.ceil(Tools.getRandom(0, map.offsetWidth / this.width - 1)) * this.width;
+        this.y = Math.ceil(Tools.getRandom(0, map.offsetHeight / this.height - 1)) * this.height;
         console.log("food ", this.x, this.y);        
         //动态创建div
         var div = document.createElement("div");
