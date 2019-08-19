@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var wjl = {
+            name: "王健林",
+            money: 100000000,
+            cars: ["玛莎拉蒂", "特斯拉"],
+            houses: ["别墅", "大别墅"],
+            play: function () {
+                console.log("打高尔夫");
+            }
+        };
+        var wsc = {
+            name: "王思聪"
+        };
+
+        //对象的拷贝(继承)
+        //复制对象的成员给另一个对象
+        // for (const key in wjl) {
+        //     if (wjl.hasOwnProperty(key)) {
+        //         if(wsc.hasOwnProperty(key))
+        //         {
+        //             continue;
+        //         }
+        //         wsc[key] = wjl[key];     
+        //     }
+        // }
+
+        function extend(parent, child) {
+            for (const key in parent) {
+                if (parent.hasOwnProperty(key)) {
+                    if (child.hasOwnProperty(key)) {
+                        continue;
+                    }
+                    child[key] = parent[key];
+                }
+            }
+        }
+        extend(wjl, wsc);
+
+    </script>
+</body>
+
+</html>

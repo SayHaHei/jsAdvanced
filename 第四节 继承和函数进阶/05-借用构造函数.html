@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //借用构造函数 -- 只借用属性，无法借用prototype的方法
+        function Person(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+        Person.prototype.sayHi = function () {  
+            console.log(this.name + " say Hi");
+        }
+        function Student(name, age, sex, score) {
+            Person.call(this, name, age, sex);
+            this.score = score;
+        }
+
+        // function Teacher(name, age, sex, score) {
+            
+        // }
+        var s1 = new Student("zs", 12, "男", 100);
+        console.dir(s1);
+        
+    </script>
+</body>
+</html>
