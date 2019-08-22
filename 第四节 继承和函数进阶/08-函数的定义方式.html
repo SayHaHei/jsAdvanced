@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        javascript的执行过程
+        1.预解析    变量声明提前
+        2.执行
+        */
+        //1. 函数声明
+        /* fn();//正常执行
+        function fn() {
+            console.log("test");
+        }
+        fn();//正常执行
+        fn1();//报错
+        //2 函数表达式
+        var fn1 = function () {  
+            console.log("函数表达式");
+        }
+        fn1();//正常执行 */
+        //根据条件声明函数
+        //现代浏览器不会提升if语句中的函数声明
+        //在老的IE版本中if语句中的函数声明也会提升
+        // if(true)
+        // {
+        //     function fn() {
+        //         console.log("fn - true");
+        //     }
+        // }
+        // else{
+        //     function fn() {  
+        //         console.log("fn - false");
+        //     }
+        // }
+        // fn();
+
+        //兼容性处理
+/*         var fn;
+        if(true)
+        {
+            fn = function() {
+                console.log("fn - true");
+            }
+        }
+        else{
+            fn = function() {  
+                console.log("fn - false");
+            }
+        }
+        fn(); */
+    </script>
+</body>
+</html>
