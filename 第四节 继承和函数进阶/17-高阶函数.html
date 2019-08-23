@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    //高阶函数
+    <script>
+        /* 高阶函数
+           1.函数作为参数          
+           2.函数作为返回值
+        */
+        function eat(fn) {
+            setInterval(
+                function () {
+                    console.log("吃完饭");
+                    //之后的事情 不确定
+                    fn();
+                },
+                2000
+            )
+        }
+        eat(
+            function () {  
+                console.log("去唱歌")
+            }
+        );
+
+    </script>
+</body>
+
+</html>
