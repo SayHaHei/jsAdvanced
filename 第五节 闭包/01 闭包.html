@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //闭包
+        /* 
+            在一个作用域中可以访问另一个作用域的变量
+         */
+
+
+        //未发生闭包
+        /* function fn() {
+            var n = 10;
+            return n;
+        }
+        fn(); */
+
+        //发生闭包
+        //闭包特性  延展了作用域范围
+        function fn() {
+            var n = 10;
+            return function () {  
+                return n;
+            };
+        }
+        fn();
+        console.log()
+    </script>
+</body>
+
+</html>

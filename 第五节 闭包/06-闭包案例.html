@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    我是字体
+    <button id="btn1">按钮1</button>
+    <button id="btn2">按钮2</button>
+    <button id="btn3">按钮3</button>
+    <script>
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+
+        /* btn1.onclick = function () {  
+            document.body.style.fontSize = "12px";
+            
+        }
+        btn2.onclick = function () {  
+            document.body.style.fontSize = "14px";
+
+        }
+        btn3.onclick = function () {  
+            document.body.style.fontSize = "16px";
+
+        } */
+        function makeFunc(size) {
+            return function () {  
+                document.body.style.fontSize = size + "px";
+            }
+        }
+        btn1.onclick = makeFunc(12);
+        btn2.onclick = makeFunc(14);
+        btn3.onclick = makeFunc(18);
+
+
+    </script>
+</body>
+</html>
