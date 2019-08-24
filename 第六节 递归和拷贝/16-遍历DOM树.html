@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //遍历指定元素下的所有元素
+        function loadtree(parent) {
+            for(var i = 0; i < parent.children.length; i++)
+            {
+                //遍历第一级节点子元素
+                var child = parent.children[i];
+                console.log(child);
+                loadtree(child);
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>
