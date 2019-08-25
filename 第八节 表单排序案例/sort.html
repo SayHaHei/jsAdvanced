@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [66, 33, 88, 44];
+        arr.sort(function (a, b) {  
+            return a - b;
+        });
+        var data = [
+            {name:"赵柳", age:12, num:6, score:91},
+            {name:"李四", age:24, num:1, score:93},
+            {name:"王五", age:21, num:2, score:96},
+            {name:"钱八", age:26, num:3, score:97},
+            {name:"张三", age:22, num:5, score:99}
+        ];
+        data.sort(function (o1, o2) {  
+            return o1.age - o2.age;
+        });
+    </script>
+</body>
+
+</html>
